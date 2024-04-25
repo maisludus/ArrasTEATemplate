@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d0502d1b5bbe1674b8b4d95adee720d5
+guid: a6c77d795a76e0144894c9877e807fc8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CursorPequeno_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44a192f523b6f744b6c6f2373ddf41d
+      internalID: 245463018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CursorPequeno_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaeb5ca7177f06247aff869a03ca5c61
+      internalID: -392011424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CursorPequeno_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 6
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc979dae128e9f418928e98246b4ce7
+      internalID: -1652973990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +208,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CursorPequeno_0: 245463018
+      CursorPequeno_1: -392011424
+      CursorPequeno_2: -1652973990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
