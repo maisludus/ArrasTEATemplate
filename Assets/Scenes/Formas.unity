@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: EscolherComImg
       objectReference: {fileID: 0}
+    - target: {fileID: 917936119688162006, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 750
+      objectReference: {fileID: 0}
     - target: {fileID: 1879496363440216564, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: pasta
       value: formas
@@ -294,35 +298,39 @@ PrefabInstance:
       objectReference: {fileID: 1228037597}
     - target: {fileID: 4973555610587315694, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -544.9995
+      value: -544.9996
       objectReference: {fileID: 0}
     - target: {fileID: 5752517221521440741, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.b
-      value: 0.25882354
+      value: 0.019607844
       objectReference: {fileID: 0}
     - target: {fileID: 5752517221521440741, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.g
-      value: 0.9254902
+      value: 0.7647059
       objectReference: {fileID: 0}
     - target: {fileID: 5752517221521440741, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.r
-      value: 0.96862745
+      value: 0.972549
       objectReference: {fileID: 0}
     - target: {fileID: 6093919614610266119, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -894.9795
+      value: -835
       objectReference: {fileID: 0}
     - target: {fileID: 6718848239899578294, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.b
-      value: 0.25882354
+      value: 0.019607844
       objectReference: {fileID: 0}
     - target: {fileID: 6718848239899578294, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.g
-      value: 0.9254902
+      value: 0.7647059
       objectReference: {fileID: 0}
     - target: {fileID: 6718848239899578294, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.r
-      value: 0.96862745
+      value: 0.972549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293190107560899905, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 483
       objectReference: {fileID: 0}
     - target: {fileID: 8510521506697414854, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Pivot.x

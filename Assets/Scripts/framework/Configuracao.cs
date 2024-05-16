@@ -168,6 +168,7 @@ namespace Ludus.SDK.Framework
                 else
                 {
                     //caso contrario manda pra cena final
+                    Controle.configuracao = null;
                     SceneManager.LoadScene(cenaFinal);
                     return;
                 }

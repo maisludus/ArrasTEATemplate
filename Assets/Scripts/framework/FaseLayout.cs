@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 
 namespace Ludus.SDK.Framework
@@ -13,6 +15,8 @@ namespace Ludus.SDK.Framework
 
         protected GameObject objeto;
         protected GameObject sombra;
+        public bool usarDimensoesImagens = false;   
+
         public int objetoLargura = 100, objetoAltura = 100, sombraLargura = 100, sombraAltura = 100;
         protected GameObject painel;
         protected List<Image> imgsObjeto;
@@ -147,11 +151,12 @@ namespace Ludus.SDK.Framework
             try
             {
                 audiosObjeto = Resources.LoadAll<AudioClip>("fases/" + pasta + "/objetoSons").ToList<AudioClip>();
+                audiosObjeto = this.ordenarAudio(audiosObjeto);
             }
             catch (System.Exception)
             {
 
-                audiosObjeto = null;
+                audiosObjeto =new List<AudioClip>();
             }
 
             //se tem conteúdo auxiliar busca as imagens desse conteúdo e também, se for o caso, os sons desse conteúdo        
@@ -171,6 +176,7 @@ namespace Ludus.SDK.Framework
                 try
                 {
                     audiosAuxiliar = Resources.LoadAll<AudioClip>("fases/" + pasta + "/auxiliarSons").ToList<AudioClip>();
+                    audiosAuxiliar = this.ordenarAudio(audiosAuxiliar);
                 }
                 catch (System.Exception)
                 {
@@ -222,7 +228,7 @@ namespace Ludus.SDK.Framework
                 }
                 //lista de elementos de áudio do painel OBJETO
                 audiosSourceObjetos = objeto.GetComponentsInChildren<AudioSource>().ToList<AudioSource>();
-
+                //precisa organizar a ordenação
 
             }
             catch (System.Exception ex)
@@ -251,15 +257,22 @@ namespace Ludus.SDK.Framework
 
                 int selecionado = this.IndiceNovo(indiceSelecionado);
                 imgsObjeto[i].sprite = spritesObjeto[selecionado];
+                if (usarDimensoesImagens)
+                {
+                    imgsObjeto[i].rectTransform.sizeDelta = new Vector2(spritesObjeto[selecionado].rect.width, spritesObjeto[selecionado].rect.height);
+                }
+                
+                
                 if (substituirObjetoAoParear)
                 {
                     imgsObjetoPareado[i].sprite = spritesObjetoPareado[selecionado];
                 }
-                if (audiosObjeto != null)
+
+                if (audiosObjeto.Count>0)
                 {
                     try
                     {
-                        audiosSourceObjetos[i].GetComponent<AudioSource>().clip = audiosObjeto[selecionado];
+                       audiosSourceObjetos[i].GetComponent<AudioSource>().clip = audiosObjeto[selecionado];
                     }
                     catch (System.Exception ex)
                     {
@@ -293,7 +306,7 @@ namespace Ludus.SDK.Framework
         protected virtual int IndiceNovo(List<int> indiceSelecionado)
         {
             int novoindice;
-            novoindice = Random.Range(0, spritesObjeto.Count);
+            novoindice = UnityEngine.Random.Range(0, spritesObjeto.Count);
 
             int tentativas = 1;
             //verifica se o índice já apareceu naquele nível e se as tentativas de achar o indice novo acabaram
@@ -301,7 +314,7 @@ namespace Ludus.SDK.Framework
             //nesse caso vai aceitar imagem repetida
             while (Controle.configuracao.VerificaOcorrenciaIndiceNoNivel(novoindice))
             {
-                novoindice = Random.Range(0, spritesObjeto.Count);
+                novoindice = UnityEngine.Random.Range(0, spritesObjeto.Count);
                 tentativas++;
                 //se o número de itens disponíveis para a cena for igual a quantidade de objetos já exibidos Zera os exibidos
                 if (Controle.configuracao.objetosJaExibidos.Count == spritesObjeto.Count)
@@ -330,7 +343,34 @@ namespace Ludus.SDK.Framework
 
         }
 
+        private List<AudioClip> ordenarAudio(List<AudioClip> audiosObjeto)
+        {
+            AudioClip aux;
+            string vetori, vetorj;
 
+
+            for (int i = 0; i < audiosObjeto.Count; i++)
+            {
+                for (int j = 0; j < audiosObjeto.Count; j++)
+                {
+                    vetori = audiosObjeto[i].name.ToString().Split('_')[1];
+                    vetorj = audiosObjeto[j].name.ToString().Split('_')[1];
+
+                    
+                    if (Int32.Parse(vetori) < Int32.Parse(vetorj))
+                    {
+                        //aqui acontece a troca, do maior cara  vaia para a direita e o menor para a esquerda
+                        aux = audiosObjeto[i];
+                        audiosObjeto[i] = audiosObjeto[j];
+                        audiosObjeto[j] = aux;
+                    }
+                }
+            }
+
+            return audiosObjeto;
+
+
+        }
     }
 
 }

@@ -54,7 +54,10 @@ namespace Ludus.SDK.Framework
             JsonLog.log.app = Application.productName;
             JsonLog.log.version = Application.version;
             JsonLog.log.scene = scene.name;
-            JsonLog.log.build = EditorUserBuildSettings.activeBuildTarget.ToString();
+            //JsonLog.log.build = EditorUserBuildSettings.activeBuildTarget.ToString();
+            //SE for compilar pra web tem q descomentar o código abaixo e comentar o código acima
+            JsonLog.log.build = "WEB";
+
             JsonLog.log.datehourstart = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             JsonLog.log.addCol(new LudusLogCol("[+LUDUS-monitor-start]", "O script iniciou em'" + this.gameObject.name + "', id: " + this.gameObject.GetInstanceID()));

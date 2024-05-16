@@ -13,6 +13,7 @@ namespace Ludus.SDK.Framework
         private AudioSource audioSourceSombraAuxiliar;
         private Image imgSombra;
         private Image imgAuxiliar;
+       
 
         void Start()
         {
@@ -45,12 +46,19 @@ namespace Ludus.SDK.Framework
         {
 
             imgSombra.sprite = spritesSombra[indiceSelecionado[0]];
-
+            if (usarDimensoesImagens)
+            {
+                imgSombra.rectTransform.sizeDelta = new Vector2(spritesSombra[indiceSelecionado[0]].rect.width, spritesSombra[indiceSelecionado[0]].rect.height);
+            }
             try
             {
                 if (conteudoauxiliar)
                 {
                     imgAuxiliar.sprite = spritesAuxiliar[indiceSelecionado[0]];
+                    if (usarDimensoesImagens)
+                    {
+                        imgAuxiliar.rectTransform.sizeDelta = new Vector2(spritesAuxiliar[0].rect.width, spritesAuxiliar[0].rect.height);
+                    }
                     //se tem audio auxiliar, relaciona
                     if (audiosAuxiliar != null && audioSourceSombraAuxiliar != null)
                     {

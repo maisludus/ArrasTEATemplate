@@ -45,9 +45,17 @@ namespace Ludus.SDK.Framework
                 for (int i = 0; imgsSombra.Count > i; i++)
                 {
                     imgsSombra[i].sprite = spritesSombra[indiceSelecionado[i]];
+                    if (usarDimensoesImagens)
+                    {
+                        imgsSombra[i].rectTransform.sizeDelta = new Vector2(spritesSombra[indiceSelecionado[i]].rect.width, spritesSombra[indiceSelecionado[i]].rect.height);
+                    }
                     if (this.conteudoauxiliar)
                     {
                         imgsSombraAuxiliar[i].sprite = spritesAuxiliar[indiceSelecionado[i]];
+                        if (usarDimensoesImagens)
+                        {
+                            imgsSombraAuxiliar[i].rectTransform.sizeDelta = new Vector2(spritesAuxiliar[indiceSelecionado[i]].rect.width, spritesAuxiliar[indiceSelecionado[i]].rect.height);
+                        }
                         //se tem audio auxiliar, relaciona
                         if (audiosAuxiliar != null && audiosSourceSombraAuxiliar != null)
                         {
