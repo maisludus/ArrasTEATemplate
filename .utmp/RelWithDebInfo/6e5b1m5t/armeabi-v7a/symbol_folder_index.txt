@@ -1,0 +1,1 @@
+C:\Users\T-GAMER\Documents\GitHub\ArrasTEATemplate\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\6e5b1m5t\obj\armeabi-v7a

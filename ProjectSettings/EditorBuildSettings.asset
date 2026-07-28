@@ -65,4 +65,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DifGalinha.unity
     guid: 0f08775afbe7bf4428efd313c55aa4b6
+  - enabled: 1
+    path: Assets/Scenes/ConclusaoFase.unity
+    guid: bf49957571552a14ea37b8844d3c5f06
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

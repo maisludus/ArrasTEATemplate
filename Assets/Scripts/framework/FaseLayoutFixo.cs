@@ -61,7 +61,7 @@ namespace Ludus.SDK.Framework
                         {
                             if (audiosAuxiliar.Count > 0)
                             {
-                                audiosSourceSombraAuxiliar[i].clip = audiosAuxiliar[indiceSelecionado[0]];
+                                audiosSourceSombraAuxiliar[i].clip = audiosAuxiliar[indiceSelecionado[i]];
                             }
                         }
                     }

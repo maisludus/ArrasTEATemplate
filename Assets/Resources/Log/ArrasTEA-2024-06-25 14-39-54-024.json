@@ -1,0 +1,568 @@
+{
+    "app": "ArrasTEA",
+    "version": "1.0",
+    "scene": "Cores",
+    "build": "WEB",
+    "datehourstart": "2024-06-25 14:39:48",
+    "datehourend": "2024-06-25 14:39:54",
+    "reports": [
+        {
+            "id": "1",
+            "title": "[+LUDUS-monitor-start]",
+            "description": "O script iniciou em'VN', id: 45636",
+            "date": "2024-06-25 14:39:48"
+        },
+        {
+            "id": "2",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(336;324;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "3",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(360;314;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "4",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(393;305;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "5",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(405;302;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "6",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(426;300;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "7",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(438;298;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "8",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(457;296;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "9",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(480;294;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "10",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(531;289;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "11",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(553;288;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "12",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(573;286;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "13",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(593;285;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "14",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(635;281;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "15",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(673;280;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "16",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(706;278;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "17",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(769;276;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "18",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(802;276;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "19",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(829;276;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "20",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(840;276;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "21",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(868;281;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "22",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(872;282;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "23",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(876;285;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "24",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(877;285;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "25",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(878;286;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "26",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(879;288;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "27",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(880;290;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "28",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(880;291;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "29",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(880;294;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "30",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(880;297;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "31",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(880;299;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "32",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(880;304;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "33",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(880;307;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "34",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(880;309;0)",
+            "date": "2024-06-25 14:39:53"
+        },
+        {
+            "id": "35",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(881;311;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "36",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(882;313;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "37",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(883;315;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "38",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(884;316;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "39",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(884;317;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "40",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(886;318;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "41",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(887;319;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "42",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(887;320;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "43",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(887;319;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "44",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(887;318;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "45",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(888;316;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "46",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(889;309;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "47",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(890;307;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "48",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(892;300;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "49",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(896;289;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "50",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(900;280;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "51",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(908;263;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "52",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(915;252;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "53",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(919;244;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "54",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(928;231;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "55",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(934;221;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "56",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(944;206;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "57",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(954;194;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "58",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(962;180;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "59",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(968;172;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "60",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(976;159;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "61",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(982;151;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "62",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(989;143;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "63",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(994;134;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "64",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1000;128;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "65",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1004;124;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "66",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1008;122;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "67",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1012;119;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "68",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1015;117;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "69",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1018;115;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "70",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1020;114;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "71",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1022;113;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "72",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1024;112;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "73",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1029;111;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "74",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1036;111;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "75",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1040;111;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "76",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1043;111;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "77",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1048;112;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "78",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1050;113;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "79",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1053;116;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "80",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1057;118;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "81",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1059;121;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "82",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1061;122;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "83",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1064;125;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "84",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1065;127;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "85",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1067;127;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "86",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1067;129;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "87",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1068;129;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "88",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1068;130;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "89",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1069;131;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "90",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1069;132;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "91",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1070;132;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "92",
+            "title": "[+LUDUS-mouse-move]:",
+            "description": "POS:(1070;133;0)",
+            "date": "2024-06-25 14:39:54"
+        },
+        {
+            "id": "93",
+            "title": "[+LUDUS-mouse-click]:",
+            "description": "Botão esquerdo .btnProximo",
+            "date": "2024-06-25 14:39:54"
+        }
+    ]
+}

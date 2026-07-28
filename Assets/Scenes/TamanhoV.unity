@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 1228037597}
     - target: {fileID: 4973555610587315694, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -544.9995
+      value: -424
       objectReference: {fileID: 0}
     - target: {fileID: 5752517221521440741, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.b
@@ -326,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6093919614610266119, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -835
+      value: -749
       objectReference: {fileID: 0}
     - target: {fileID: 6718848239899578294, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.b
@@ -342,7 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8293190107560899905, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 483
+      value: 415
       objectReference: {fileID: 0}
     - target: {fileID: 8510521506697414854, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Pivot.x
@@ -516,7 +516,7 @@ MonoBehaviour:
   sombraAuxiliarLargura: 100
   sombraAuxiliarAltura: 100
   botaoTrocaCena: {fileID: 1615912315}
-  pasta: cataVentoT
+  pasta: cuboT
   cenaFinal: CenaFinal
   niveis:
   - quantidadeElementos: 2

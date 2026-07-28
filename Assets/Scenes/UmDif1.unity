@@ -454,6 +454,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -282.22
       objectReference: {fileID: 0}
+    - target: {fileID: 8326448973995056106, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: EscolherComImg
+      objectReference: {fileID: 0}
     - target: {fileID: 8510521506697414854, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_Pivot.x
       value: 0
