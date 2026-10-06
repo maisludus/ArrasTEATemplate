@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -238,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 917936119688162006, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 750
+      value: 667
       objectReference: {fileID: 0}
     - target: {fileID: 1879496363440216564, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: pasta
@@ -309,40 +305,44 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1228037597}
     - target: {fileID: 4973555610587315694, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1416.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973555610587315694, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -544.9995
+      value: -484.35
       objectReference: {fileID: 0}
     - target: {fileID: 5752517221521440741, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.b
-      value: 0.019607844
+      value: 0.47058824
       objectReference: {fileID: 0}
     - target: {fileID: 5752517221521440741, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.g
-      value: 0.7647059
+      value: 0.2901961
       objectReference: {fileID: 0}
     - target: {fileID: 5752517221521440741, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.r
-      value: 0.972549
+      value: 0.12941177
       objectReference: {fileID: 0}
     - target: {fileID: 6093919614610266119, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -835
+      value: -792
       objectReference: {fileID: 0}
     - target: {fileID: 6718848239899578294, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.b
-      value: 0.019607844
+      value: 0.47058824
       objectReference: {fileID: 0}
     - target: {fileID: 6718848239899578294, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.g
-      value: 0.7647059
+      value: 0.2901961
       objectReference: {fileID: 0}
     - target: {fileID: 6718848239899578294, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Color.r
-      value: 0.972549
+      value: 0.12941177
       objectReference: {fileID: 0}
     - target: {fileID: 8293190107560899905, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 483
+      value: 413
       objectReference: {fileID: 0}
     - target: {fileID: 8510521506697414854, guid: 2433505fad649344798af9c27ca74fa5, type: 3}
       propertyPath: m_Pivot.x

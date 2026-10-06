@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -159,7 +155,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.9372549, g: 0.91764706, b: 0.8509804, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -233,11 +229,15 @@ PrefabInstance:
       objectReference: {fileID: 1244884287}
     - target: {fileID: 2532833429263231859, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -751
+      value: -837
       objectReference: {fileID: 0}
     - target: {fileID: 2532833429263231859, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 260
+      value: 182
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701192792654337199, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4622023303827317060, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -245,23 +245,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622023303827317060, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -404
+      value: -336
       objectReference: {fileID: 0}
     - target: {fileID: 4973555610587315694, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -308.26
+      value: -200.01
       objectReference: {fileID: 0}
     - target: {fileID: 4973555610587315694, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 349
+      value: 346.48
       objectReference: {fileID: 0}
     - target: {fileID: 4973555610587315694, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 46.130005
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4973555610587315694, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 322.78
+      value: 261.26
       objectReference: {fileID: 0}
     - target: {fileID: 7841930981495545653, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8293190107560899905, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -308.26
+      value: -207.26
       objectReference: {fileID: 0}
     - target: {fileID: 8293190107560899905, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_SizeDelta.y
@@ -277,11 +277,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8293190107560899905, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 46.130005
+      value: -4.3691406
       objectReference: {fileID: 0}
     - target: {fileID: 8293190107560899905, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -241.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326448973995056106, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: EscolherComImg
       objectReference: {fileID: 0}
     - target: {fileID: 8510521506697414854, guid: f038c1dfcaa1c3c4eb426590fd3ca591, type: 3}
       propertyPath: m_Pivot.x

@@ -38,6 +38,10 @@ namespace Ludus.SDK.Framework
         public GameObject painelObjeto, painelSombra, painelGeral;
         private GameObject preFabObjeto, preFabSombra;
 
+        //gamificação
+        public int acertos;
+        public int erros;
+
 
         public virtual void CarregarConfiguracao(GameObject novoPainelGeral)
         {
@@ -49,7 +53,8 @@ namespace Ludus.SDK.Framework
                     return;
 
                 }
-                
+                acertos = 0;
+                erros = 0;
                 nivelAtual = 0;
                 repeticaoAtual = 0;
                 inicial = false;
@@ -168,7 +173,12 @@ namespace Ludus.SDK.Framework
                 else
                 {
                     //caso contrario manda pra cena final
-                    Controle.configuracao = null;
+                    //se usa o módulo de gamificação guarda essa informação para atualização posterior de estrelas
+                    if (GameManager.instance != null)
+                    {
+                        this.EndPhase();
+                    }
+                    
                     SceneManager.LoadScene(cenaFinal);
                     return;
                 }
@@ -178,7 +188,7 @@ namespace Ludus.SDK.Framework
             SceneManager.LoadScene(scene.name);
 
         }
-    
+        
         public virtual void AtualizarAcerto()
         {
 
@@ -265,6 +275,8 @@ namespace Ludus.SDK.Framework
                     {
                         audioSomJogo.clip = somOk;
                         audioSomJogo.Play();
+                        acertos++;
+                        Debug.Log(acertos);
                     }
                     break;
 
@@ -273,6 +285,7 @@ namespace Ludus.SDK.Framework
                     {
                         audioSomJogo.clip = somErro;
                         audioSomJogo.Play();
+                        erros++;
                     }
                     break;
 
@@ -283,5 +296,73 @@ namespace Ludus.SDK.Framework
 
             }
         }
+
+        //Gamificação
+        private void EndPhase()
+        {
+            // 1. Pega o índice do nível atual (Nível 1 = índice 0).
+ 
+            int currentLevelIndex=0;
+            for (int i = 0; i < GameManager.instance.levels.Length; i++)
+            {
+                String atual = GameManager.instance.levels[i].sceneName;
+                if (atual.Equals(SceneManager.GetActiveScene().name))
+                {
+                    currentLevelIndex = i;
+                }
+            }
+            
+            // 2. Calcula os resultados da partida.
+            int score = 1000 - (erros * 200);
+            if (score < 0) score = 0;
+            int xpGained = 150 - (erros * 25);
+            if (xpGained < 0) xpGained = 0;
+            int starsEarned = CalculateStars(erros);
+
+            // 3. ATUALIZA O EMBLEMA NO EMBLEMManager.
+            // Isso deve acontecer ANTES de salvar o jogo.
+            if (EmblemManager.instance != null)
+            {
+                EmblemManager.instance.playerEmblem.AddXP(xpGained);
+            }
+
+            // 4. Atualiza os dados de progressão no "diário de bordo" do GameManager.
+            // Só salva as estrelas se o jogador conseguiu uma pontuação melhor que a anterior.
+            if (starsEarned > GameManager.instance.levels[currentLevelIndex].starsEarned)
+            {
+                GameManager.instance.levels[currentLevelIndex].starsEarned = starsEarned;
+            }
+
+            // Desbloqueia o próximo nível apenas se o jogador conseguiu 2 ou mais estrelas.
+            if (starsEarned >= 2)
+            {
+                int nextLevelIndex = currentLevelIndex + 1;
+                // Garante que não tentamos desbloquear um nível que não existe.
+                if (nextLevelIndex < GameManager.instance.levels.Length)
+                {
+                    GameManager.instance.levels[nextLevelIndex].isUnlocked = true;
+                }
+            }
+
+            // 5. Prepara o "pacote de dados" para a tela de conclusão.
+            GameManager.instance.lastPhaseScore = score;
+            GameManager.instance.lastPhaseErrors = erros;
+            GameManager.instance.lastPhaseXpGained = xpGained;
+
+            // 6. SALVA O PROGRESSO NO DISCO. (Agora com o emblema e níveis atualizados).
+            SaveLoadManager.SaveGame();
+
+           
+        }
+
+        private int CalculateStars(int errorCount)
+        {
+            if (errorCount == 0) return 3;       // Perfeito (0 erros)
+            if (errorCount <= 2) return 2; // Bom (1 ou 2 erros)
+            if (errorCount <= 4) return 1; // Razoável (3 ou 4 erros)
+            return 0;                      // Falha (5 ou mais erros)
+        }
+
+        //Gamificação Fim
     }
 }
