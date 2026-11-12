@@ -178,7 +178,7 @@ namespace Ludus.SDK.Framework
                     {
                         this.EndPhase();
                     }
-                    
+                    Controle.configuracao = null;
                     SceneManager.LoadScene(cenaFinal);
                     return;
                 }
