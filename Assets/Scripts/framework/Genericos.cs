@@ -17,7 +17,6 @@ namespace Ludus.SDK.Framework
         //Template. Ele limpa a configuração anterior da fase
         public void CarregarCenaFase(string nomeCena)
         {
-            
             Controle.configuracao = null;
             this.CarregarCena(nomeCena);
         }

@@ -12,6 +12,9 @@ namespace Ludus.SDK.Framework
         public GameObject continueButton;
         public GameObject animationButton;
         private AudioSource audioSource;
+        //legenda
+        public string legenda;
+
         private void Start()
         {
             // continueButton.SetActive(false);
@@ -21,15 +24,44 @@ namespace Ludus.SDK.Framework
                 audioSource = gameObject.GetComponentInChildren<AudioSource>();
                 Button btn = gameObject.GetComponentInChildren<Button>();
 
-                btn.onClick.AddListener(tocarSomAuxiliar);
+                btn.onClick.AddListener(EventoCliqueAuxiliar);
             }
+            AjustarCollider();
 
         }
 
+         void AjustarCollider()
+    {
+        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+        if (boxCollider == null)
+        {
+            boxCollider = gameObject.AddComponent<BoxCollider2D>();
+        }
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        Vector2 tamanho = rectTransform.rect.size;
+        // Define o tamanho do collider com base nas variáveis largura/altura
+        boxCollider.size = tamanho = rectTransform.rect.size;
+        boxCollider.offset = rectTransform.rect.center;
+    }
 
-        public void tocarSomAuxiliar()
+        public void EventoCliqueAuxiliar()
         {
             audioSource.Play();
+            if (Controle.configuracao.temLegendaAuxiliar)
+            {
+                try
+                {
+                    if (this.legenda != null && Controle.configuracao.txtLegenda != null)
+                    {
+                        Controle.configuracao.txtLegenda.text = this.legenda;
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.LogError("[+LUDUS - EventoCliqueAuxiliar] Erro ao carregar a legenda do conteúdo auxiliar");
+                    Debug.LogException(ex);
+                }
+            }
         }
 
 
@@ -45,7 +77,7 @@ namespace Ludus.SDK.Framework
                 {
                     imgObjeto = eventData.pointerDrag.gameObject.GetComponent<Image>();
                     imgSombra = gameObject.GetComponent<Image>();
-
+                    
 
 
                 }
@@ -56,7 +88,7 @@ namespace Ludus.SDK.Framework
                     Debug.LogException(ex);
                     return;
                 }
-
+                Debug.Log(imgObjeto.sprite.ToString().Split('_')[1]);
 
                 if (imgObjeto.sprite.ToString().Split('_')[1].Equals((imgSombra.sprite.ToString().Split('_')[1])))
                 {

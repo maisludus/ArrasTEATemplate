@@ -7,16 +7,21 @@ using UnityEngine.UI;
 
 namespace Ludus.SDK.Framework
 {
-    public class FaseLayoutFixoUmItem : FaseLayout
+    public class FaseLayoutFixoUmItem : FaseLayoutDivide
     {
-
+     
         private AudioSource audioSourceSombraAuxiliar;
         private Image imgSombra;
         private Image imgAuxiliar;
-       
+        //esse evento sombra foi adicionado para, se for o caso, conseguir adicionar a
+        //legenda
+        private EventoSombra eventoSombra;
+
+
 
         void Start()
         {
+            
             if (Controle.configuracao == null)
             {
                 Controle.configuracao = new ConfiguracaoFaseUmItem();
@@ -37,11 +42,14 @@ namespace Ludus.SDK.Framework
 
             #region Popular        
             List<int> indiceSelecionado = this.PopularObjetos();
-
+          
             this.PopularSombras(indiceSelecionado);
             #endregion
 
+            base.Start();
+
         }
+
         protected override void PopularSombras(List<int> indiceSelecionado)
         {
 
@@ -67,11 +75,16 @@ namespace Ludus.SDK.Framework
                             audioSourceSombraAuxiliar.clip = audiosAuxiliar[indiceSelecionado[0]];
                         }
                     }
+                    if (this.temLegendaAuxiliar) 
+                    { 
+                        eventoSombra.legenda = this.textosAuxiliar[indiceSelecionado[0]];
+                    }
+                    
                 }
             }
             catch (System.Exception ex)
             {
-                Debug.LogError("[+LUDUS] erro ao carregar o conteúdo adicional da sobra");
+                Debug.LogError("[+LUDUS] erro ao carregar o conte?do adicional da sobra");
                 Debug.LogException(ex);
 
             }
@@ -90,7 +103,7 @@ namespace Ludus.SDK.Framework
         protected override void CarregarSombrasPainel()
         {
 
-            //verifica se tem conteúdo auxiliar pra sombra, se sim busca as duas imagens
+            //verifica se tem conte?do auxiliar pra sombra, se sim busca as duas imagens
             if (this.conteudoauxiliar)
             {
                 List<Image> imagens = sombra.GetComponentsInChildren<Image>().ToList<Image>();
@@ -98,6 +111,7 @@ namespace Ludus.SDK.Framework
 
                 imgSombra = imagens[0];
                 imgAuxiliar = imagens[1];
+                eventoSombra = sombra.GetComponentInChildren<EventoSombra>();
 
                 try
                 {
@@ -106,9 +120,10 @@ namespace Ludus.SDK.Framework
                 catch (System.Exception)
                 {
 
-                    Debug.LogWarning("[+LUDUS] áudio Source não encontrado no prefab sombra");
+                    Debug.LogWarning("[+LUDUS] ?udio Source n?o encontrado no prefab sombra");
                     audioSourceSombraAuxiliar = null;
                 }
+                
             }
             else
             {

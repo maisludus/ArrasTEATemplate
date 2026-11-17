@@ -6,19 +6,34 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using TMPro;
 
 namespace Ludus.SDK.Framework
 { 
     public abstract class Configuracao
     {
+        public enum FormasdeInteracao
+        {
+            DragAndDrop,
+            CliqueSimples, 
+            CliquePegaESolta
+        }
+
+
+
         public List<Nivel> niveis;
         public String cenaFinal;
         public int objetoLargura, objetoAltura, sombraLargura, sombraAltura;
         public bool conteudoauxiliar; //se a sombra que será exibida tem cotnteúdo auxiliar, influencia no prefab que será carregado da sombra
-        public string sombraauxiliar;
+        public Auxiliares sombraauxiliar;
         public int sombraAuxiliarLargura = 100, sombraAuxiliarAltura = 100;
         public bool substituirObjetoAoParear;
+
+
+        public FormasdeInteracao formaDeInteracao = FormasdeInteracao.DragAndDrop;
+        //essa variável só tem sentido ser setada no script clique.. 
+        //é para o caso onde clicamos e não queremos q a sombra troque a imagem pela do objeto
+        public bool trocarImagemSombraAoClicar=true;
 
         public Button botaoTroca;
         protected AudioClip somOk;
@@ -31,7 +46,7 @@ namespace Ludus.SDK.Framework
 
         //controle da fase atualmente apresentada
         protected int nivelAtual;
-        protected int repeticaoAtual;
+        public int repeticaoAtual;
 
         protected bool inicial = true;
 
@@ -41,7 +56,13 @@ namespace Ludus.SDK.Framework
         //gamificação
         public int acertos;
         public int erros;
+        
+        public TextMeshProUGUI txtLegenda;
+        public bool temLegendaObjeto, temLegendaAuxiliar;
 
+        //variável para verificar se tem cursor para ser utilizado
+        //é atribuida no FaseLayout quando é feita a verificação do arquivo na pasta
+        public bool usacursor;
 
         public virtual void CarregarConfiguracao(GameObject novoPainelGeral)
         {
@@ -195,6 +216,11 @@ namespace Ludus.SDK.Framework
             botaoTroca.gameObject.SetActive(true);
 
         }
+        public virtual void AtualizarErro()
+        {
+            //aqui vai a atualização da pontuação, por enquanto n faz nada
+
+        }
 
         public virtual void ZerarExibidos()
         {
@@ -235,14 +261,31 @@ namespace Ludus.SDK.Framework
             preFabObjeto = GameObject.Instantiate(meuPF) as GameObject;
             RectTransform rt = preFabObjeto.GetComponent<RectTransform>();
             rt.sizeDelta = new Vector2(objetoLargura, objetoAltura);
+//o padrão de interação é Drag and Drop, se habilitar clique ele vai trocar
+            //na prática ele habilita o script de clique e desabilita o outro
+
+            switch (this.formaDeInteracao)
+            {
+                case FormasdeInteracao.CliqueSimples:
+                    preFabObjeto.AddComponent<Clique>();
+                    break;
+
+                case FormasdeInteracao.CliquePegaESolta:
+                    preFabObjeto.AddComponent<PegaeSolta>();
+                    break;
+
+                default:
+                    preFabObjeto.AddComponent<DragAndDrop>();
+                    break;
+            }
 
 
             rt = new RectTransform();
 
             if (this.conteudoauxiliar)
             {
-                meuPF = Resources.Load<GameObject>("preFabs/" + this.sombraauxiliar);
-                preFabSombra = GameObject.Instantiate(meuPF) as GameObject;
+                              meuPF = Resources.Load<GameObject>("preFabs/auxiliares/" + this.sombraauxiliar.ToString());
+  preFabSombra = GameObject.Instantiate(meuPF) as GameObject;
                 rt = preFabSombra.GetComponent<RectTransform>();
                 rt.sizeDelta = new Vector2(sombraLargura, sombraAltura);
 

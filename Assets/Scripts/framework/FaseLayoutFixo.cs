@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Ludus.SDK.Framework
 { 
-    public class FaseLayoutFixo : FaseLayout
+    public class FaseLayoutFixo : FaseLayoutDivide
     {
 
         private List<AudioSource> audiosSourceSombraAuxiliar;
@@ -15,6 +15,7 @@ namespace Ludus.SDK.Framework
 
         void Start()
         {
+           
             //Carrega o tipo de tela que será associado a configuração da fase
             if (Controle.configuracao == null)
             {
@@ -36,7 +37,9 @@ namespace Ludus.SDK.Framework
 
             List<int> indiceSelecionado =  this.PopularObjetos();
             this.PopularSombras(indiceSelecionado);
-       
+
+            base.Start();
+
         }
         protected override void PopularSombras(List<int> indiceSelecionado)
         {
@@ -64,6 +67,21 @@ namespace Ludus.SDK.Framework
                                 audiosSourceSombraAuxiliar[i].clip = audiosAuxiliar[indiceSelecionado[i]];
                             }
                         }
+                        //LEGENDAS
+                        try
+                        {
+                            if (this.temLegendaAuxiliar) 
+                            {
+                                imgsSombraAuxiliar[i].GetComponent<EventoSombra>().legenda = this.textosAuxiliar[indiceSelecionado[i]];
+                            }
+                        }
+                        catch (System.Exception ex)
+                        {
+
+                            Debug.LogError("[+LUDUS] erro ao carregar a legenda do conteúdo auxiliar");
+                            Debug.LogException(ex);
+                        }
+                        
                     }
                 }
             }
